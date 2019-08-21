@@ -1,7 +1,7 @@
 .main-body {
     position: relative;
-    left: 0px;
-    top: 0px;
+    height: 100%;
+    width: 100%;
 
     background-image: url(../src/assets/images/main-page-fon.png);
     background-repeat: no-repeat;
@@ -13,11 +13,6 @@
 
         display: flex;
         justify-content: center;
-        position: absolute;
-        top: 144px;
-        bottom: 0;
-        left: 0;
-        right: 0;
         margin: 0 auto;
 
         font-family: Days;
@@ -33,10 +28,6 @@
         position: absolute;
         width: 845px;
         height: 70px;
-        top: 344px;
-        bottom: 0;
-        left: 0;
-        right: 0;
         margin: 0 auto;
     
         font-family: Rubik;
@@ -54,10 +45,6 @@
         position: absolute;
         width: 866px;
         height: 72px;
-        top: 518px;
-        bottom: 0;
-        left: 0;
-        right: 0;
         margin: 0 auto;
 
         .choose-products {
@@ -99,7 +86,6 @@
             line-height: 28px;
             text-align: center;
             letter-spacing: 0.5px;
-
             color: #FFFFFF;
         }
 
