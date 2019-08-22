@@ -1,0 +1,15 @@
+$days__path: '../../fonts/subset-Days';
+
+@font-face {
+    font-family: 'Days';
+    src: url('#{$days__path}.svg') format('svg'),
+        url('#{$days__path}.woff') format('woff'),
+        url('#{$days__path}.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+}

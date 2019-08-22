@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
@@ -8,33 +7,30 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 
 const del = require('del');
-
 const browserSync = require('browser-sync').create();
-
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
-
 const babel = require('gulp-babel');
 
 const paths = {
     dest: './build',
     pug: {
-        pages: './src/**/*.pug',
-        src: './src/**/*.pug'
+        pages: './src/pugs/**/*.pug',
+        src: './src/pugs/**/*.pug'
     },
     scss: {
-        src: './src/assets/main.scss',
+        src: './src/scss/main.scss',
         watch: './src/**/*.scss',
-        dest: './build/assets/'
+        dest: './build/scss/'
     },
     img: {
-        src: './src/img/**/*.*',
-        dest: './build/assets/img/'
+        src: './src/images/**/*.*',
+        dest: './build/images/'
     },
     fonts: {
-        src: './src/assets/fonts/**/*.*',
-        dest: './build/assets/fonts/'
+        src: './src/fonts/**/*.*',
+        dest: './build/fonts/'
     },
     scripts: {
         src: './src/js/**/*.js',
