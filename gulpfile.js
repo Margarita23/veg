@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 
 const pug = require('gulp-pug');
-
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
@@ -25,13 +24,13 @@ const paths = {
         src: './src/**/*.pug'
     },
     scss: {
-        src: './src/main.scss',
-        watch: './src/**/**/*.scss',
-        dest: './build/styles/'
+        src: './src/assets/main.scss',
+        watch: './src/**/*.scss',
+        dest: './build/assets/'
     },
     img: {
         src: './src/img/**/*.*',
-        dest: './build/img/'
+        dest: './build/assets/img/'
     },
     fonts: {
         src: './src/assets/fonts/**/*.*',
