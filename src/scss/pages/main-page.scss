@@ -4,58 +4,53 @@
     width: 100%;
     padding: 0px;
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+    min-width: 800px;
 
     background-image: url(../../images/main-page-fon.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background-repeat: no-repeat ;
+    background-attachment: inherit;
+    background-position: center center;
+    background-clip: padding-box;
 
     .main-page__title {
-        width: 900px;
-        height: 144px;
-
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-
+        max-width: 900px;
         font-family: $days;
         font-size: 56px;
         line-height: 72px;
         text-align: center;
         color: $black;
+        padding-bottom: 56px;
+        margin-top: -10%;
     }
-
     .main-page__sub-title {
-        display: flex;
-        justify-content: center;
-        width: 845px;
-        height: 70px;
-        margin: 0 auto;
-    
+        max-width: 845px;
         font-family: $rubik;
         font-style: normal;
         font-weight: normal;
-        font-size: 24px;
         line-height: 145%;
         text-align: center;
         color: $black;
+        padding-bottom: 104px;
     }
-    
-    .main-page__buttons-container {
-        display: flex;
-        justify-content: center;
-        width: 866px;
-        height: 72px;
-        margin: 0 auto;
 
+    .main-page__buttons-container {
+        min-width: 800px;
+        max-width: 900px;
+        display: inline-flex;
+        justify-content: space-between;
+        
         .main-page__buttons-container__green {
             width: 373px;
             height: 72px;
-            margin-right: 60px;
-
+            display: inline-block;
             background: $green;
             border-radius: 2px;
             border: none;
-
             font-family: $rubik;
             font-style: normal;
             font-weight: bold;
@@ -63,8 +58,8 @@
             line-height: 28px;
             text-align: center;
             letter-spacing: 0.5px;
-
             color: $white;
+
         }
 
         .main-page__buttons-container__green:hover{
@@ -72,11 +67,10 @@
         }
         
         .main-page__buttons-container__black {
+            
             width: 373px;
             height: 72px;
-            margin-left: 60px;
             border: none;
-
             background: $black;
             border-radius: 2px;
             font-family: $rubik;
