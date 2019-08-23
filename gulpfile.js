@@ -20,9 +20,9 @@ const paths = {
         src: './src/pugs/**/*.pug'
     },
     scss: {
-        src: './src/scss/main.scss',
+        src: './src/styles/main.scss',
         watch: './src/**/*.scss',
-        dest: './build/scss/'
+        dest: './build/styles/'
     },
     img: {
         src: './src/images/**/*.*',
