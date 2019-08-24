@@ -1,9 +1,7 @@
 .main-page {
     @include size(100%, 100%);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex(column, center, center);
     min-height: 800px;
     min-width: 800px;
     background-image: url(../../images/main-page-fon.png);
@@ -46,11 +44,19 @@
         }
 
         .main-page__buttons--green {
-            @include button-back-color($green, $green)
+            background-color: $green;
+        }
+
+        .main-page__buttons--green:hover {
+            background-color: lighten($green, 15%);
         }
 
         .main-page__buttons--black {
-            @include button-back-color($black, $black)
+            background-color: $black;
+        }
+
+        .main-page__buttons--black:hover {
+            background-color: lighten($black, 15%);
         }
     }
 }

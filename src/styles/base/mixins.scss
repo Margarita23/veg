@@ -1,13 +1,10 @@
-@mixin button-back-color($color, $hover){
-    &{
-        background-color: $color;
-    }
-    &:hover{
-        background-color: lighten($color, $amount: 15%)
-    }
-}
-
 @mixin size($width, $height){
     width: $width;
     height: $height;
+}
+
+@mixin flex($direction: row, $justify-content, $align-items){
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
 }
