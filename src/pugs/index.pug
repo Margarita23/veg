@@ -1,14 +1,12 @@
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="../styles/main.min.css")
-        title OkVegan
-    body
-        .main-page
-            .main-page__title Вегетарианские блюда — это красиво и аппетитно
-            .main-page__sub-title Если вы или ваш друг вегитарианцы - это совсем не значит, что вы до конца жизни обречены жевать пресные и скучные блюда.
-            .main-page__buttons
-                button.main-page__buttons__green Выбрать продукты
-                button.main-page__buttons__black Каталог рецептов
+extends ./layout.pug
+
+block var
+    - var title = "OkVegan"
+
+block content
+    .main-page
+        .main-page__title Вегетарианские блюда — это красиво и аппетитно
+        .main-page__sub-title Если вы или ваш друг вегитарианцы - это совсем не значит, что вы до конца жизни обречены жевать пресные и скучные блюда.
+        .main-page__buttons
+            button.main-page__buttons__green Выбрать продукты
+            button.main-page__buttons__black Каталог рецептов
