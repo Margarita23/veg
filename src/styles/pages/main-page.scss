@@ -48,19 +48,19 @@
             color: $white;
         }
 
-        .main-page__buttons__green {
+        .main-page__buttons--green {
             background: $green;
         }
 
-        .main-page__buttons__green:hover{
+        .main-page__buttons--green:hover{
             background-color: lighten($color: $green, $amount: 15%);
         }
 
-        .main-page__buttons__black {
+        .main-page__buttons--black {
             background: $black;
         }
 
-        .main-page__buttons__black:hover{
+        .main-page__buttons--black:hover{
             background-color: lighten($color: $black, $amount: 15%);
         }
     }
