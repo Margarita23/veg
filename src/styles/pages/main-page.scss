@@ -1,6 +1,5 @@
 .main-page {
     @include size(100%, 100%);
-    display: flex;
     @include flex(column, center, center);
     min-height: 800px;
     min-width: 800px;
