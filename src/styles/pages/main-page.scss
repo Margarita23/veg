@@ -1,6 +1,5 @@
 .main-page {
-    height: 100%;
-    width: 100%;
+    @include size(100%, 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,8 +35,7 @@
         justify-content: space-between;
 
         .main-page__button{
-            width: 373px;
-            height: 72px;
+            @include size(373px, 72px);
             border-radius: 2px;
             font-weight: bold;
             font-size: 24px;
@@ -48,19 +46,11 @@
         }
 
         .main-page__buttons--green {
-            background: $green;
-        }
-
-        .main-page__buttons--green:hover{
-            background-color: lighten($color: $green, $amount: 15%);
+            @include button-back-color($green, $green)
         }
 
         .main-page__buttons--black {
-            background: $black;
-        }
-
-        .main-page__buttons--black:hover{
-            background-color: lighten($color: $black, $amount: 15%);
+            @include button-back-color($black, $black)
         }
     }
 }
