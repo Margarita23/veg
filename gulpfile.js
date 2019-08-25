@@ -16,29 +16,26 @@ const babel = require('gulp-babel');
 const paths = {
     dest: './build',
     pug: {
-        pages: './src/pugs/**/*.pug',
-        src: './src/pugs/**/*.pug'
+        pages: './src/pages/**/**/*.pug',
+        src: './src/pages/**/*.pug',
     },
     scss: {
-        src: './src/styles/main.scss',
-        watch: './src/**/*.scss',
-        dest: './build/styles/'
+        src: './src/pages/index.scss',
+        watch: './src/**/**/*.scss',
     },
     img: {
         src: './src/images/**/*.*',
-        dest: './build/images/'
+        dest: './build/images'
     },
     fonts: {
         src: './src/fonts/**/*.*',
         dest: './build/fonts/'
     },
     scripts: {
-        src: './src/js/**/*.js',
-        dest: './build/js/'
+        src: './src/pages/**/**/*.js',
     }
 };
 
-//html
 function pages() {
     return gulp
         .src(paths.pug.pages)
@@ -46,7 +43,6 @@ function pages() {
         .pipe(gulp.dest(paths.dest));
 }
 
-//styles ++ postcss ( autoprefixer )
 function styles() {
     return gulp
         .src(paths.scss.src)
@@ -55,7 +51,7 @@ function styles() {
         .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest(paths.scss.dest));
+        .pipe(gulp.dest(paths.dest));
 }
 
 // clean dest dir
@@ -65,18 +61,22 @@ function clean() {
 
 // replace img
 function img() {
-    return gulp.src(paths.img.src).pipe(gulp.dest(paths.img.dest));
+    return gulp
+        .src(paths.img.src)
+        .pipe(gulp.dest(paths.img.dest));
 }
 function fonts() {
-    return gulp.src(paths.fonts.src).pipe(gulp.dest(paths.fonts.dest));
+    return gulp
+        .src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
 }
 // webpack + gulp-babel
 function scripts() {
     return gulp
-        .src('src/js/main.js')
+        .src('src/pages/index.js')
         .pipe(gulpWebpack(webpackConfig, webpack))
         .pipe(babel())
-        .pipe(gulp.dest(paths.scripts.dest));
+        .pipe(gulp.dest(paths.dest));
 }
 
 function watch() {
