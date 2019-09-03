@@ -1,0 +1,15 @@
+extends ../layout/layout.pug
+include ../../components/icons/check/check.pug
+include ../../components/icons/menu/menu.pug
+include ../../components/icons/arrows/arrow-right.pug
+
+block var
+    - var title = "OkVegan"
+
+block content
+    .fruit-page
+        .hello Fruit!!!
+        .icons
+            +checkIcon('svg-icon--check')
+            +menuIcon('svg-icon--menu')
+            +arrowRightIcon('svg-icon--arrow-right')
