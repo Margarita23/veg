@@ -1,11 +1,30 @@
-.icons {
+.fruit-page__icons {
     width: 100px;
-    height: 500px;
+    height: 350px;
 
-    .svg-icon {
+    * {
         fill: "#492511";
         @include size(100px, 100px);
         background-color: rgb(254, 214, 252);
     }
+}
+
+.fruit-page__pickup-recipe {
+    width: 280px;
+    height: 48px;
+
+    border: 1px solid #492511;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+    font-family: $rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #492511;
 }
 
