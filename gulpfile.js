@@ -17,7 +17,7 @@ const paths = {
     dest: './build',
     pug: {
         pages: './src/pages/**/**/*.pug',
-        src: './src/pages/**/*.pug',
+        src: './src/pages/**/**/*.pug',
     },
     scss: {
         src: './src/pages/index.scss',

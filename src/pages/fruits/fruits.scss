@@ -1,0 +1,11 @@
+.icons {
+    width: 100px;
+    height: 500px;
+
+    .svg-icon {
+        fill: "#492511";
+        @include size(100px, 100px);
+        background-color: rgb(254, 214, 252);
+    }
+}
+
