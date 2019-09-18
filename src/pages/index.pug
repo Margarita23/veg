@@ -1,4 +1,5 @@
 extends ./layout/layout.pug
+include ../components/construct-button/button.pug
 
 block var
     - var title = "OkVegan"
@@ -9,5 +10,6 @@ block content
         .main-page__sub-title Если вы или ваш друг вегитарианцы - это совсем не значит, что вы до конца жизни обречены жевать пресные и скучные блюда.
         .main-page__buttons
             a(href="./fruits/fruits.html")
-                button.main-page__button.main-page__buttons--green Выбрать продукты
-            button.main-page__button.main-page__buttons--black Каталог рецептов
+                +button('Выбрать продукты', 'main-page__button main-page__buttons--green')
+            a(href="./recipes/recipes.html")
+                +button(' Каталог рецептов', 'main-page__button main-page__buttons--black')
