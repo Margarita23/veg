@@ -1,10 +1,5 @@
-extends ../../pages/main-page.pug
-
-include ../icons/check/check.pug
-
-block var
-    - var title = "Constructor"
-
-block content
-    .wrapper
-        +checkIcon('svg-icon--red')
+mixin checkbox(className, title)
+    label.fruit-page__label
+        input(type="checkbox", name="check", class=className)
+        .square_check
+        span.fruit-page__title=title
