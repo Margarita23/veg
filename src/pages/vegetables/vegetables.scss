@@ -55,8 +55,10 @@
 .fruits-page__letters {
     width: 100%;
     height: 100%;
-    list-style: none;
-    padding: 0;
+    overflow-y: scroll;
+    overflow-x: visible;
+    scroll-snap-type: y mandatory;
+    scroll-snap-type: both proximity;
 
     .fruits-page__letter--print {
         font-family: $days;
@@ -65,11 +67,37 @@
         color: rgba(59, 24, 5, 0.74);
     }
 
-    li {
-        height: 30px;
+    .fruit-page__letters--block {
         display: flex;
         flex-direction: row;
+        margin-top: 17px;
+        margin-bottom: 17px;
+        max-width: 900px;
     }
+}
+
+.fruit-page__border--bottom {
+    // display: block;
+    margin-left: 30px;
+    margin-top: 35px;
+    position: absolute;
+    border: 1px solid #492511;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(73, 37, 17, 0.24);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: rgba(73, 37, 17, 0.24);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #492511;
+    border-radius: 4px;
 }
 
 .fruit-page__letter {
@@ -83,83 +111,27 @@
     padding-bottom: 12px;
     margin-right: 12px;
     border-right: 1px solid #492511;
+
+    &:after {
+        display: block;
+        content: '';
+        margin-left: 29px;
+        width: 55px;
+        height: 1px;
+        background-color: #492511;
+    }
 }
 
 .fruit-page__variants {
     height: 100%;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
-
-    li {
-        margin-right: 48px;
-    }
 }
 
-
-
-
-
-    input[type="checkbox"]:checked,
-    input[type="checkbox"]:not(:checked)
-    {
-        position: absolute;
-        left: -9999px;
-    }
-
-    input[type="checkbox"]:checked + label,
-    input[type="checkbox"]:not(:checked) + label{
-        display: inline-block;
-        position: relative;
-        padding-left: 34px;
-        cursor: pointer;
-    }
-
-    input[type="checkbox"]:checked + label:before,
-    input[type="checkbox"]:not(:checked) + label:before{
-        content: "";
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 26px;
-        height: 26px;
-        border: 1px solid #492511;
-        background-color: none;
-        border-radius: 2px;
-    }
-
-input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after {
-    content: "";
-    position: absolute;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+.fruit-page__input {
+    background-color: #492511;
 }
-
-input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after {
-    left: 0px;
-    top: 0px;
-    width: 28px;
-    height: 28px;
-    border-radius: 2px;
-    background: url(images/check.svg) center no-repeat;
-}
-
-input[type="checkbox"]:not(:checked) + label:after {
-    opacity: 0;
-}
-
-input[type="checkbox"]:checked + label:after {
-    opacity: 1;
-}
-
-
-
 
 .fruit-page__pickup-recipe {
     width: 280px;

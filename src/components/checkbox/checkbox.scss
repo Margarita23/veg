@@ -1,0 +1,62 @@
+.fruit-page__label {
+    display: flex;
+    align-items: center;
+    margin-right: 48px;
+}
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + .square_check,
+input[type="checkbox"]:not(:checked) + .square_check{
+    display: inline-block;
+    position: relative;
+    padding-left: 36px;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+}
+
+input[type="checkbox"]:checked + .square_check:before,
+input[type="checkbox"]:not(:checked) + .square_check:before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #492511;
+    background-color: none;
+    border-radius: 2px;
+}
+
+input[type="checkbox"]:checked + .square_check:after,
+input[type="checkbox"]:not(:checked) + .square_check:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    left: 0px;
+    top: 0px;
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    background: url(images/check.svg) center no-repeat;
+}
+
+input[type="checkbox"]:not(:checked) + .square_check:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + .square_check:after {
+    opacity: 1;
+}
+
+.fruit-page__title {
+    display: inline-block;
+}
