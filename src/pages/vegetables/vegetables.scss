@@ -1,0 +1,188 @@
+.fruit-page {
+    @include size(100%, 100%);
+    background-image: url(images/vegetables.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-width: 1200px;
+    padding: 112px;
+}
+
+.fruit-page__body {
+    height: 100%;
+    width: 100%;
+    background: rgba($white, 0.95);
+    padding: 48px 72px 48px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fruit-page_products-count {
+    margin-left: auto;
+}
+
+.fruit-page__menu {
+    @include flex(row, space-between, center);
+    height: 46px;
+    margin-bottom: 40px;
+
+    .fruit-page__menu--print {
+        width: 324px;
+        height: 46px;
+        font-family: $days;
+        font-size: 36px;
+        line-height: 46px;
+        color: #492511;
+        margin-left: 52px;
+    }
+
+    .fruit-page__products-count {
+        width: 188px;
+        height: 21px;
+
+        font-family: $rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        color: #000000;
+    }
+}
+
+.fruits-page__letters {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+
+    .fruits-page__letter--print {
+        font-family: $days;
+        font-size: 28px;
+        line-height: 36px;
+        color: rgba(59, 24, 5, 0.74);
+    }
+
+    li {
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.fruit-page__letter {
+    display: inline-block;
+    font-family: Days;
+    font-size: 28px;
+    width: 30px;
+    height: 36px;
+    color: rgba(73, 37, 17, 0.74);
+    padding-right: 12px;
+    padding-bottom: 12px;
+    margin-right: 12px;
+    border-right: 1px solid #492511;
+}
+
+.fruit-page__variants {
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+    li {
+        margin-right: 48px;
+    }
+}
+
+
+
+
+
+    input[type="checkbox"]:checked,
+    input[type="checkbox"]:not(:checked)
+    {
+        position: absolute;
+        left: -9999px;
+    }
+
+    input[type="checkbox"]:checked + label,
+    input[type="checkbox"]:not(:checked) + label{
+        display: inline-block;
+        position: relative;
+        padding-left: 34px;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"]:checked + label:before,
+    input[type="checkbox"]:not(:checked) + label:before{
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 26px;
+        height: 26px;
+        border: 1px solid #492511;
+        background-color: none;
+        border-radius: 2px;
+    }
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after,
+input[type="checkbox"]:not(:checked) + label:after {
+    left: 0px;
+    top: 0px;
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+    background: url(images/check.svg) center no-repeat;
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+
+
+
+.fruit-page__pickup-recipe {
+    width: 280px;
+    height: 48px;
+
+    border: 1px solid #492511;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+    font-family: $rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #492511;
+}
+
+.fruit-page__footer {
+    display: flex;
+
+    .fruit-page__pickup-recipe {
+        margin-left: auto;
+    }
+}

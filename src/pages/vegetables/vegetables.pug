@@ -1,0 +1,31 @@
+extends ../layout/layout.pug
+include ../../components/icons/check/check.pug
+include ../../components/icons/menu/menu.pug
+include ../../components/icons/arrows/arrow-right.pug
+include ../../components/construct-button/button.pug
+include ../../components/construct-title/title.pug
+
+block var
+    - var title = "OkVegan"
+
+block content
+    .fruit-page
+        .fruit-page__body
+            .fruit-page__menu
+                +menuIcon('fruit-page__menu--image')
+                +title('Овощи и зелень', 'fruit-page__menu--print')
+                +title('Выбрано продуктов: 1', 'fruit-page_products-count')
+            ul.fruits-page__letters
+                li
+                    .fruit-page__letter Б
+                    ul.fruit-page__variants
+                        li
+                            input(type="checkbox", name="check", id="check", class="fruit-page__input")
+                            label(for="check").fruit-page__label Баклажаны
+                        li
+                            input(type="checkbox", name="check", id="check", class="fruit-page__input")
+                            label(for="check").fruit-page__label Бобы
+            .fruit-page__footer
+                +title('1 из 4', 'fruit-page__number')
+                +arrowRightIcon('fruit-page__icon--arrow-right')
+                +button('Подобрать рецепты', 'fruit-page__pickup-recipe')
