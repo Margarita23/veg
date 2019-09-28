@@ -7,7 +7,7 @@
     background-position: center center;
     background-size: cover;
 
-    .main-page__title {
+    .main-page__title title{
         max-width: 900px;
         font-family: $days;
         font-size: 56px;
@@ -17,7 +17,7 @@
         padding-bottom: 56px;
         margin-top: -10%;
     }
-    .main-page__sub-title {
+    .main-page__sub-title title {
         max-width: 845px;
         line-height: 145%;
         text-align: center;
