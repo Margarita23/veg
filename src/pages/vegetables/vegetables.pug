@@ -5,6 +5,7 @@ include ../../components/icons/arrows/arrow-right.pug
 include ../../components/checkbox/checkbox.pug
 include ../../components/construct-button/button.pug
 include ../../components/construct-title/title.pug
+include ../../components/construct-pagination/construct-pagination.pug
 
 block var
     - var title = "OkVegan"
@@ -14,8 +15,10 @@ block content
         .fruit-page__body
             .fruit-page__menu
                 +menuIcon('fruit-page__menu--image')
-                +title('Овощи и зелень', 'fruit-page__menu--print')
-                +title('Выбрано продуктов: 1', 'fruit-page_products-count')
+                .fruit-page__menu--print
+                    +title('Овощи и зелень')
+                .fruit-page__products-count
+                    +title('Выбрано продуктов: 1')
             .fruits-page__letters
                 .fruit-page__letters--block
                     .fruit-page__letter Б
@@ -58,6 +61,6 @@ block content
                         +checkbox("fruit-page__input", "Морковь")
                         +checkbox("fruit-page__input", "Мускатный орех")
             .fruit-page__footer
-                +title('1 из 4', 'fruit-page__number')
+                +pagination("4", "1", "link")
                 +arrowRightIcon('fruit-page__icon--arrow-right')
                 +button('Подобрать рецепты', 'fruit-page__pickup-recipe')
