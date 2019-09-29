@@ -1,5 +1,9 @@
+include ../icons/check/check.pug
+
 mixin checkbox(className, title)
-    label.fruit-page__label
-        input(type="checkbox", name="check", class=className)
-        .square_check
-        span.fruit-page__title=title
+    label(class=className)
+        .custom-checkbox
+            input(type="checkbox", name="check")
+            .custom-checkbox__icon
+                +checkIcon()
+        span.custom-checkbox__title=title

@@ -7,6 +7,17 @@
     padding: 112px;
 }
 
+.fruit-page__label {
+    display: flex;
+    align-items: center;
+    margin-right: 48px;
+}
+
+.fruit-page__title {
+    display: inline-block;
+    padding-left: 8px;
+}
+
 .fruit-page__body {
     height: 100%;
     width: 100%;
@@ -74,13 +85,6 @@
     }
 }
 
-.fruit-page__border--bottom {
-    margin-left: 30px;
-    margin-top: 35px;
-    position: absolute;
-    border: 1px solid #492511;
-}
-
 ::-webkit-scrollbar {
     width: 8px;
     background: rgba(73, 37, 17, 0.24);
@@ -101,20 +105,19 @@
     display: inline-block;
     font-family: Days;
     font-size: 28px;
-    width: 30px;
+    width: 36px;
     height: 36px;
     color: rgba(73, 37, 17, 0.74);
-    padding-right: 12px;
-    padding-bottom: 12px;
-    margin-right: 12px;
+    text-align: center;
     border-right: 1px solid #492511;
+    margin-right: 12px;
 
     &:after {
         display: block;
         content: '';
-        margin-left: 29px;
-        width: 55px;
         height: 1px;
+        width: 55px;
+        margin-left: 35px;
         background-color: #492511;
     }
 }
