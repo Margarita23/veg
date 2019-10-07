@@ -11,56 +11,70 @@ block var
     - var title = "OkVegan"
 
 block content
-    .fruit-page
-        .fruit-page__body
-            .fruit-page__menu
-                +menuIcon('fruit-page__menu--image')
-                .fruit-page__menu--print
-                    +title('Овощи и зелень')
-                .fruit-page__products-count
-                    +title('Выбрано продуктов: 1')
-            .fruits-page__letters
-                .fruit-page__letters--block
-                    .fruit-page__letter Б
-                    .fruit-page__variants
-                        +checkbox("fruit-page__label", "Баклажаны")
-                        +checkbox("fruit-page__label", "Бобы")
-                        +checkbox("fruit-page__label", "Брокколи")
-                        +checkbox("fruit-page__label", "Брюква")
-                .fruit-page__letters--block
-                    .fruit-page__letter Г
-                    .fruit-page__variants
-                        +checkbox("fruit-page__label", "Горох")
-                        +checkbox("fruit-page__label", "Грецкий орех")
-                .fruit-page__letters--block
-                    .fruit-page__letter Д
-                    .fruit-page__variants
-                        +checkbox("fruit-page__label", "Дыня")
-                .fruit-page__letters--block
-                    .fruit-page__letter З
-                    .fruit-page__variants
-                        +checkbox("fruit-page__label", "Зелень")
-                .fruit-page__letters--block
-                    .fruit-page__letter К
-                    .fruit-page__variants
-                        +checkbox("fruit-page__label", "Кабачки")
-                        +checkbox("fruit-page__label", "Каперсы")
-                        +checkbox("fruit-page__label", "Капуста")
-                        +checkbox("fruit-page__label", "Картофель")
-                        +checkbox("fruit-page__label", "Кольраби")
-                        +checkbox("fruit-page__label", "Кукуруза")
-                .fruit-page__letters--block
-                    .fruit-page__letter Л
-                    .fruit-page__variants
-                        +checkbox("fruit-page__label", "Лук зеленый")
-                        +checkbox("fruit-page__label", "Лук репчатый")
-                .fruit-page__letters--block
-                    .fruit-page__letter М
-                    .fruit-page__variants
-                        +checkbox("fruit-page__label", "Маслины")
-                        +checkbox("fruit-page__label", "Морковь")
-                        +checkbox("fruit-page__label", "Мускатный орех")
-            .fruit-page__footer
-                +pagination("4", "1", "link")
-                +arrowRightIcon('fruit-page__icon--arrow-right')
-                +button('Подобрать рецепты', 'fruit-page__pickup-recipe')
+  .fruit-page
+    .fruit-page__body
+      .fruit-page__menu
+        +menuIcon('fruit-page__menu--image')
+        .fruit-page__menu--print
+          +title('Овощи и зелень')
+        .fruit-page__products-count
+            +title('Выбрано продуктов: 1')
+      .fruits-page__letters
+        .fruit-page__letters--block
+          .fruit-page__letter Б
+          .fruit-page__border-bottom
+          .fruit-page__variants
+            +checkbox("fruit-page__label", "Баклажаны")
+            +checkbox("fruit-page__label", "Бобы")
+            +checkbox("fruit-page__label", "Брокколи")
+            +checkbox("fruit-page__label", "Брюква")
+        .fruit-page__letters--block
+          .fruit-page__letter Г
+          .fruit-page__border-bottom
+          .fruit-page__variants
+            +checkbox("fruit-page__label", "Горох")
+            +checkbox("fruit-page__label", "Грецкий орех")
+        .fruit-page__letters--block
+          .fruit-page__letter Д
+          .fruit-page__border-bottom
+          .fruit-page__variants
+            +checkbox("fruit-page__label", "Дыня")
+        .fruit-page__letters--block
+          .fruit-page__letter З
+          .fruit-page__border-bottom
+          .fruit-page__variants
+            +checkbox("fruit-page__label", "Зелень")
+        .fruit-page__letters--block
+          .fruit-page__letter К
+          .fruit-page__border-bottom
+          .fruit-page__variants
+            +checkbox("fruit-page__label", "Кабачки")
+            +checkbox("fruit-page__label", "Каперсы")
+            +checkbox("fruit-page__label", "Капуста")
+            +checkbox("fruit-page__label", "Картофель")
+            +checkbox("fruit-page__label", "Кольраби")
+            +checkbox("fruit-page__label", "Кукуруза")
+            +checkbox("fruit-page__label", "Кабачки")
+            +checkbox("fruit-page__label", "Каперсы")
+            +checkbox("fruit-page__label", "Капуста")
+            +checkbox("fruit-page__label", "Картофель")
+            +checkbox("fruit-page__label", "Кольраби")
+            +checkbox("fruit-page__label", "Кукуруза")
+        .fruit-page__letters--block
+          .fruit-page__letter Л
+          .fruit-page__border-bottom
+          .fruit-page__variants
+            +checkbox("fruit-page__label", "Лук зеленый")
+            +checkbox("fruit-page__label", "Лук репчатый")
+        .fruit-page__letters--block
+          .fruit-page__letter М
+          .fruit-page__border-bottom
+          .fruit-page__variants
+            +checkbox("fruit-page__label", "Маслины")
+            +checkbox("fruit-page__label", "Морковь")
+            +checkbox("fruit-page__label", "Мускатный орех")
+      .fruit-page__footer
+        .fruit-page__pagination
+          +pagination("4", "1", "link")
+          +arrowRightIcon('fruit-page__icon--arrow-right')
+        +button('Подобрать рецепты', 'fruit-page__pickup-recipe')
