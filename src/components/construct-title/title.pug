@@ -1,2 +1,6 @@
-mixin title(value)
-    title=value
+mixin title(...values)
+    - var custtitle = '';
+    //- title=values
+    each val in values
+        - custtitle=custtitle+val
+    title=custtitle
