@@ -30,7 +30,22 @@
 }
 
 .fruit-page__products-count {
+    display: flex;
+    justify-content: center;
     margin-left: auto;
+    align-items: center;
+
+    .conter {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 33px;
+        text-align: center;
+        letter-spacing: 0.03em;
+
+        color: #000000;
+    }
 }
 
 .fruit-page__menu {

@@ -6,6 +6,7 @@ include ../../components/checkbox/checkbox.pug
 include ../../components/construct-button/button.pug
 include ../../components/construct-title/title.pug
 include ../../components/construct-pagination/construct-pagination.pug
+include ../../components/construct-counter/construct-counter.pug
 
 block var
     - var title = "OkVegan"
@@ -18,7 +19,8 @@ block content
         .fruit-page__menu--print
           +title('Овощи и зелень')
         .fruit-page__products-count
-            +title('Выбрано продуктов: ', '1')
+            +title('Выбрано продуктов: ')
+            +counter(1)
       .fruits-page__letters
         .fruit-page__letters--block
           .fruit-page__letter Б
