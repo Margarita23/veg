@@ -1,9 +1,10 @@
 include ../icons/check/check.pug
 
 mixin checkbox(className, title)
-    label(class=className)
-        .custom-checkbox
-            input(type="checkbox", name="check")
-            .custom-checkbox__icon
-                +checkIcon()
-        span.custom-checkbox__title=title
+    .custom
+        label(class=className)
+            .custom-checkbox
+                input(type="checkbox", name="check")
+                .custom-checkbox__icon
+                    +checkIcon()
+            span.custom-checkbox__title=title

@@ -1,12 +1,13 @@
 @import '../base/fonts.scss';
 @import '../base/variables.scss';
 @import '../base/mixins.scss';
+
+@import './layout/layout.scss';
+@import './main-page.scss';
+@import './vegetables/vegetables.scss';
+
 @import '../components/icons/check/check.scss';
 @import '../components/construct-button/button.scss';
 @import '../components/checkbox/checkbox.scss';
 @import '../components/construct-title/title.scss';
 @import '../components/construct-counter/construct-counter.scss';
-
-@import './layout/layout.scss';
-@import './main-page.scss';
-@import './vegetables/vegetables.scss';

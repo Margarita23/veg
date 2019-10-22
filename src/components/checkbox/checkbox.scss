@@ -2,6 +2,7 @@
     @include size(28px, 28px);
     border: 1px solid $brown;
     border-radius: 2px;
+    cursor: pointer;
     input {
         display: none;
         &:checked + .custom-checkbox__icon {
@@ -13,11 +14,13 @@
 .custom-checkbox__icon {
     opacity: 0;
     position: relative;
-    cursor: pointer;
+    width:100%;
+    height: 100%;
+    @include flex(row, center, center);
 }
 
-.custom-checkbox__icon > * {
-    @include size(28px, 28px);
+.custom-checkbox__icon > svg {
+    @include size(24px, 24px);
 }
 
 .custom-checkbox__title {
@@ -29,5 +32,4 @@
     line-height: 26px;
     text-align: center;
     letter-spacing: 0.03em;
-    cursor: pointer;
 }
